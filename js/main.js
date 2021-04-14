@@ -124,6 +124,12 @@ function createFields(jsonObj) {
                     }
                     fieldsDiv.appendChild(fieldsInp);
                     break;
+                case 'password':
+                    fieldsInp.type = fields[i].input.type;
+                    fieldsInp.required = fields[i].input.required;
+                    fieldsInp.placeholder = fields[i].input.placeholder;
+                    fieldsDiv.appendChild(fieldsInp);
+                    break;
                 default:
                     //На случай, если будет загружаться инпут которого нет в списке
                     fieldsInp.type = fields[i].input.type;
