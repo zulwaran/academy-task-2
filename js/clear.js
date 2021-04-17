@@ -5,8 +5,3 @@
         section.removeChild(section.firstChild);
     }
 }
-
-/* let clear = document.querySelector('#clear');
-clear.addEventListener('click', function () {
-    clearForm();
-}) */
