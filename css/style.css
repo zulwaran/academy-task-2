@@ -4,7 +4,7 @@
   padding: 0;
 }
 body{
-  background-color: #F1ECEE;
+  background: url(../img/bg.png) repeat;
   min-width: 320px;
   max-width: 1920px;
   font-size: 16px;
@@ -16,35 +16,63 @@ body{
   justify-content: center;
 }
 .form{
-margin: 0 auto;
-position: relative;
-text-align: center;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
 }
 .form__inner{
-border: 10px solid #c37a7a;
-padding: 10px 0;
-display: inline-block;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+  border-radius: 3px;
+  padding: 10px 0 0;
+  display: inline-block;
 }
 .form__title{
-font-family: sans-serif;
-font-size: 32px;
-font-weight: bold;
-margin: 30px 0;
-text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 30px 0;
+  text-transform: uppercase;
 }
 .form__fields{
   padding: 0 10px;
 }
 .field{
-margin-bottom: 15px;
-text-align-last: center;
-justify-content: center;
+  margin-bottom: 15px;
+  text-align-last: center;
+  justify-content: center;
 }
 .field label{
-display: block;
-margin-bottom: 5px;
-align-self: center;
-margin-right: 5px;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+  align-self: center;
+  margin-right: 5px;
+}
+.field input{
+  color: #777;
+  padding: 0 10px;
+  border: 1px solid #c7d0d2;
+  border-radius: 2px;
+  box-shadow: inset 0 1.5px 3px rgb(190 190 190 / 40%), 0 0 0 5px #f5f7f8;
+  outline: none;
+}
+.field select,
+.field textarea{
+  color: #777;
+  border: 1px solid #c7d0d2;
+  border-radius: 2px;
+  box-shadow: inset 0 1.5px 3px rgb(190 190 190 / 40%), 0 0 0 5px #f5f7f8;
+  outline: none;
+}
+input[type="file"] {
+  border: none;
+  box-shadow:none;
+}
+input[type="checkbox"] {
+  border: none;
+  box-shadow:none;
 }
 .color{
   max-width:25%;
@@ -59,11 +87,20 @@ margin-right: 5px;
   width: 100%;
 }
 .form__references{
-text-align: center;
-margin: 0 10px 10px;
-display: flex;
-justify-content: space-around;
-position: relative;
+  margin: 0 10px 10px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  text-align: center;
+  color: #555;
+}
+.form__references a{
+  color: #aaa;
+  text-decoration: none;
+  transition: all .4s ease;
+}
+.form__references a:hover{
+  color: #555;
 }
 .refCheckbox {
   min-width: 13px;
@@ -75,8 +112,27 @@ position: relative;
   margin-right: 0;
 }
 .form__buttons{
-text-align: center;
+  text-align: center;
+  background: #ecf2f5;
+  box-shadow: inset 0 1px 1px #fff;
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
 }
+.form__buttons button{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+  border-radius: 30px;
+  border: 1px solid #66add6;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 30%), inset 0 1px 0 rgb(255 255 255 / 50%);
+  padding: 3px 12px;
+}
+.form__buttons button:hover{
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
+}
+
 .form__buttons button+button{
   margin-left: 30px;
 }
